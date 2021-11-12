@@ -1,0 +1,6 @@
+node_modules
+.next
+.idea
+.secret
+*.iml
+.DS_Store
