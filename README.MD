@@ -22,4 +22,18 @@ npm start
 
 ```Sample Code - (reusable) web3.js, factory.js, fund.js. (poc) App.js```
 
+**Deploy and Host on github**
+Simply access the home page
+
+https://raymondfang2.github.io/fund/
+For this hosted one, it is deployed via my account so that raise fund can only be done by charityOwner - me!
+
+```text
+Any code change, to redeploy 
+cd client
+npm run deploy
+```
+
+
+
 
