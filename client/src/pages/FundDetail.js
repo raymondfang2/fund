@@ -48,6 +48,13 @@ class FundDetail extends React.Component {
 
     renderFunds() {
         const items = [{
+            header: this.state.fundName,
+            meta: "Fund Name",
+            description:
+                "The name of this fund",
+            style: { overflowWrap: "break-word" },
+        },
+            {
             header: this.state.manager,
             meta: "Address of Manager",
             description:
