@@ -1,6 +1,6 @@
 import React from "react";
 //Semantic UI
-import { Card } from 'semantic-ui-react'
+import { Card, Form, Button, Input, Message } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 //React-Route
 import { Link} from 'react-router-dom'
@@ -14,7 +14,10 @@ class Welcome extends React.Component {
     state = {
         charityOwner: '',
         funds:[],
+        //For raising fund
         fundName: '',
+        errorMessage: '',
+        loading: false
     };
 
 
@@ -32,16 +35,24 @@ class Welcome extends React.Component {
 
     onSubmit = async (event) => {
         event.preventDefault(); //Not classical html way
+        this.setState({loading: true, errorMessage: ''});
 
-        //const accounts = await web3.eth.getAccounts();
-        const currentAccount = await web3.givenProvider.selectedAddress;
-        console.log("<======");
-        console.log(currentAccount);
+        try {
+            //const accounts = await web3.eth.getAccounts();
+            const currentAccount = await web3.givenProvider.selectedAddress;
+            console.log("<======");
+            console.log(currentAccount);
 
-        await factory.methods.raiseFund(this.state.fundName).send({
-            //from: accounts[0]
-            from: currentAccount
-        });
+            await factory.methods.raiseFund(this.state.fundName).send({
+                //from: accounts[0]
+                from: currentAccount
+            });
+        } catch (err) {
+            this.setState({errorMessage: err.message});
+        }
+
+        this.setState({loading: false});
+        window.location.reload(); //refresh the page to show the new Fund raised!
     }
 
 
@@ -64,19 +75,33 @@ class Welcome extends React.Component {
     render() {
         return (
             <div >
-                <form onSubmit={this.onSubmit}>
-                    <h2>Raise a new Fund</h2>
-                    <div>
+                {/*<form onSubmit={this.onSubmit}>*/}
+                {/*    <h2>Raise a new Fund</h2>*/}
+                {/*    <div>*/}
+                {/*        <label>Fund Name:</label>*/}
+                {/*        <input*/}
+                {/*            value = {this.state.fundName}*/}
+                {/*            onChange={event => {this.setState({fundName: event.target.value} )}}*/}
+                {/*        />*/}
+                {/*    </div>*/}
+                {/*    <button>Raise Fund</button>*/}
+                {/*</form>*/}
+                <h2>Raise a new Fund</h2>
+                <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+                    <Form.Field>
                         <label>Fund Name:</label>
-                        <input
-                            value = {this.state.fundName}
-                            onChange={event => {this.setState({fundName: event.target.value} )}}
+                        <Input
+                            value={this.state.fundName}
+                            onChange={(event)=> {
+                                this.setState({fundName: event.target.value})
+                            }}
                         />
-                    </div>
-                    <button>Raise Fund</button>
-                </form>
+                    </Form.Field>
+                    <Message error header="Oops!" content={this.state.errorMessage}/>
+                    <Button loading={this.state.loading} primary>Create!</Button>
+                </Form>
                 <hr/>
-                <h2>Charity - Everything in this charity is transparent and can be audited in the Ethereum!.</h2>
+                <h2>Fund List.</h2>
 
                 <p>This contract is managed by {this.state.charityOwner}</p>
                 <p>There are currently {this.state.funds.length} funds</p>
