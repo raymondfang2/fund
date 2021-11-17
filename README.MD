@@ -34,6 +34,8 @@ cd client
 npm run deploy
 ```
 
+**1. Sample Code with Almost Everything***
+tag -- 1-Sample-UI-Router-Factory-Fund
 
 
 
