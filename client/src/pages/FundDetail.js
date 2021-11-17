@@ -1,6 +1,6 @@
 import React from "react";
 //Semantic UI
-import { Card } from 'semantic-ui-react'
+import {Button, Card, Form, Grid, Input, Message} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 //React-Route
 import { withRouter } from 'react-router-dom'
@@ -81,11 +81,25 @@ class FundDetail extends React.Component {
     render() {
         return (
             <div >
+                <Grid padded>
+                    <Grid.Row>
+                        <Grid.Column width={10} >
+                            <h2>Fund Detail</h2>
+                            <div>{this.renderFunds()}</div>
+                        </Grid.Column>
+                        <Grid.Column width={6}>
+                            <h2>TODO: Donate Form here</h2>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column width={10} >
+                            <h2>Request List with Approval Below</h2>
 
-                <hr/>
-                <h2>Fund Detail:</h2>
-                <div>{this.renderFunds()}</div>
-                <hr />
+                        </Grid.Column>
+                        <Grid.Column width={6}> </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+
             </div>
         );
     }
