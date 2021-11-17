@@ -41,6 +41,7 @@ tag -- 1-Sample-UI-Router-Factory-Fund
 TODO: 
 1. UI: margin
 2. detail page:
-    . Request List
-    . Approve Button
-    . Create Request Form
+    . Donate Form (beside the summary)
+    . Request List (below the summary)
+    . Approve Button (beside the Request)
+    . Create Request Form (above the request list)
