@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/fund/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/fund/static/js/main.d7cf621a.chunk.js",
-    "main.js.map": "/fund/static/js/main.d7cf621a.chunk.js.map",
-    "runtime-main.js": "/fund/static/js/runtime-main.965edf27.js",
-    "runtime-main.js.map": "/fund/static/js/runtime-main.965edf27.js.map",
-    "static/js/2.823effc9.chunk.js": "/fund/static/js/2.823effc9.chunk.js",
-    "static/js/2.823effc9.chunk.js.map": "/fund/static/js/2.823effc9.chunk.js.map",
-    "static/js/3.0312a233.chunk.js": "/fund/static/js/3.0312a233.chunk.js",
-    "static/js/3.0312a233.chunk.js.map": "/fund/static/js/3.0312a233.chunk.js.map",
+    "main.css": "/fund/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/fund/static/js/main.e36c066d.chunk.js",
+    "main.js.map": "/fund/static/js/main.e36c066d.chunk.js.map",
+    "runtime-main.js": "/fund/static/js/runtime-main.823392fb.js",
+    "runtime-main.js.map": "/fund/static/js/runtime-main.823392fb.js.map",
+    "static/css/2.42bdd943.chunk.css": "/fund/static/css/2.42bdd943.chunk.css",
+    "static/js/2.87b44a43.chunk.js": "/fund/static/js/2.87b44a43.chunk.js",
+    "static/js/2.87b44a43.chunk.js.map": "/fund/static/js/2.87b44a43.chunk.js.map",
+    "static/js/3.6e3d542e.chunk.js": "/fund/static/js/3.6e3d542e.chunk.js",
+    "static/js/3.6e3d542e.chunk.js.map": "/fund/static/js/3.6e3d542e.chunk.js.map",
     "index.html": "/fund/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/fund/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.823effc9.chunk.js.LICENSE.txt": "/fund/static/js/2.823effc9.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/fund/static/media/logo.6ce24c58.svg"
+    "static/css/2.42bdd943.chunk.css.map": "/fund/static/css/2.42bdd943.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/fund/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.87b44a43.chunk.js.LICENSE.txt": "/fund/static/js/2.87b44a43.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/fund/static/media/outline-icons.ddae9b1b.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.965edf27.js",
-    "static/js/2.823effc9.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.d7cf621a.chunk.js"
+    "static/js/runtime-main.823392fb.js",
+    "static/css/2.42bdd943.chunk.css",
+    "static/js/2.87b44a43.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.e36c066d.chunk.js"
   ]
 }
