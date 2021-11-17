@@ -1,6 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
+
 import React from "react";
+//Semantic UI
+import { Card } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 import web3 from "./web3";
 import factory from "./factory";
@@ -13,6 +17,8 @@ class App extends React.Component {
     funds:[],
     fundName: '',
   };
+
+
 
   //3. This will be invoked after rendering
   //state.manager changed
@@ -37,9 +43,20 @@ class App extends React.Component {
       //from: accounts[0]
       from: currentAccount
     });
-
-
   }
+
+
+  renderFunds()  {
+    const items = this.state.funds.map((address)=> {
+      return {
+        header: address,
+        description: <a>View Fund Detail</a>,
+        fluid: true
+      }
+    });
+    return <Card.Group items={items} />;
+  }
+
 
 
 
@@ -47,14 +64,8 @@ class App extends React.Component {
   render() {
     return (
         <div >
-          <h2>Charity - Everything in this charity is transparent and can be audited in the Ethereum!.</h2>
-
-            <p>This contract is managed by {this.state.charityOwner}</p>
-            <p>There are currently {this.state.funds.length} funds</p>
-
-          <hr />
           <form onSubmit={this.onSubmit}>
-            <h4>Raise a new Fund</h4>
+            <h2>Raise a new Fund</h2>
             <div>
               <label>Fund Name:</label>
               <input
@@ -64,7 +75,13 @@ class App extends React.Component {
             </div>
             <button>Raise Fund</button>
           </form>
+          <hr/>
+          <h2>Charity - Everything in this charity is transparent and can be audited in the Ethereum!.</h2>
 
+            <p>This contract is managed by {this.state.charityOwner}</p>
+            <p>There are currently {this.state.funds.length} funds</p>
+            <div>{this.renderFunds()}</div>
+          <hr />
         </div>
     );
   }
