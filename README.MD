@@ -38,4 +38,9 @@ npm run deploy
 tag -- 1-Sample-UI-Router-Factory-Fund
 
 
-
+TODO: 
+1. UI: margin
+2. detail page:
+    . Request List
+    . Approve Button
+    . Create Request Form
