@@ -8,6 +8,7 @@ import { withRouter } from 'react-router-dom'
 import web3 from "../web3";
 import Fund from "../fund";
 import ContributeForm from "./ContributeForm";
+import RequestForm from "./RequestForm";
 
 class FundDetail extends React.Component {
     //1. This is part of the constructor will be invoked when page launch index.js
@@ -91,21 +92,23 @@ class FundDetail extends React.Component {
             <div >
                 <Grid padded>
                     <Grid.Row>
-                        <Grid.Column width={10} >
+                        <Grid.Column width={8} >
                             <h2>Fund Detail</h2>
                             <div>{this.renderFunds()}</div>
                         </Grid.Column>
-                        <Grid.Column width={6}>
+                        <Grid.Column width={8}>
                             <h2>Donation</h2>
                             <ContributeForm address={this.state.fundAddress}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column width={10} >
-                            <h2>Request List with Approval Below</h2>
-
+                        <Grid.Column width={8} >
+                            <h2>Creat Request</h2>
+                            <RequestForm address={this.state.fundAddress}/>
                         </Grid.Column>
-                        <Grid.Column width={6}> </Grid.Column>
+                        <Grid.Column width={8}>
+                            <h2>Request List with Approval Below</h2>
+                        </Grid.Column>
                     </Grid.Row>
                 </Grid>
 

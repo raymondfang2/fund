@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {Form, Input, Message, Button} from "semantic-ui-react";
 
 import web3 from "../web3";
-import factory from "../factory";
 import Fund from "../fund";
 
 
