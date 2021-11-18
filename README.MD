@@ -38,10 +38,11 @@ npm run deploy
 tag -- 1-Sample-UI-Router-Factory-Fund
 
 
-TODO: 
-1. UI: margin
+TODO:
+1. Bug in Solidity Contract - multiple donation from the same person should count once only for:
+   donatorsCount++;
 2. detail page:
-    . Donate Form (beside the summary)
+    . Donate Form (Done)
     . Request List (below the summary)
     . Approve Button (beside the Request)
     . Create Request Form (above the request list)

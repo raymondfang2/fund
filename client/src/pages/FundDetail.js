@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 
 import web3 from "../web3";
 import Fund from "../fund";
+import ContributeForm from "./ContributeForm";
 
 class FundDetail extends React.Component {
     //1. This is part of the constructor will be invoked when page launch index.js
@@ -95,7 +96,8 @@ class FundDetail extends React.Component {
                             <div>{this.renderFunds()}</div>
                         </Grid.Column>
                         <Grid.Column width={6}>
-                            <h2>TODO: Donate Form here</h2>
+                            <h2>Donation</h2>
+                            <ContributeForm address={this.state.fundAddress}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
