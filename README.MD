@@ -38,7 +38,7 @@ npm run deploy
 tag -- 1-Sample-UI-Router-Factory-Fund
 
 **3. Sample code with Donation and New Request***
-tag -- 3- Sample-Donation-Request
+tag -- 3-Sample-Donation-Request
 
 TODO:
 1. Bug in Solidity Contract - multiple donation from the same person should count once only for:
