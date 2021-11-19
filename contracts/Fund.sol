@@ -34,8 +34,13 @@ contract Fund {
     function contribute() public payable {
         require(msg.value > 0, "No value sent!");
 
-        donators[msg.sender] = true;
-        donatorsCount++;
+        //multiple donation from same donator only count once, value automatically added
+        if (!donators[msg.sender]) {
+            donators[msg.sender] = true;
+            donatorsCount++;
+        }
+//        donators[msg.sender] = true;
+//        donatorsCount++;
     }
 
     function createRequest(string memory description, uint value, address payable recipient) public restricted {

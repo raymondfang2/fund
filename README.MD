@@ -43,9 +43,10 @@ tag -- 3-Sample-Donation-Request
 **4. End to End Completion**
 tag --4-End2End-Init
 
+**5. End to End Completion with Bug fix in Solidify**
+tag --5-End2End-2
+
 TODO:
-1. Bug in Solidity Contract - multiple donation from the same person should count once only for:
-   donatorsCount++;
 2. detail page:
    . Approval button error msg 
    . Hide button for non -permission user

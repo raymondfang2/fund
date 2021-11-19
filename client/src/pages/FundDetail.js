@@ -122,21 +122,17 @@ class FundDetail extends React.Component {
             <div >
                 <Grid padded>
                     <Grid.Row>
-                        <Grid.Column width={7} >
+                        <Grid.Column width={10} >
                             <h2>Fund Detail</h2>
                             <div>{this.renderFund()}</div>
                         </Grid.Column>
-                        <Grid.Column width={9}>
+                        <Grid.Column width={6}>
                             <h2>Donation</h2>
                             <ContributeForm address={this.state.fundAddress}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column width={7} >
-                            <h2>Creat Request</h2>
-                            <RequestForm address={this.state.fundAddress}/>
-                        </Grid.Column>
-                        <Grid.Column width={9}>
+                        <Grid.Column width={10}>
                             <h2>Request List</h2>
                             <Table>
                                 <Table.Header>
@@ -153,6 +149,10 @@ class FundDetail extends React.Component {
                                     {this.renderRequestRows()}
                                 </Table.Body>
                             </Table>
+                        </Grid.Column>
+                        <Grid.Column width={6} >
+                            <h2>Creat Request</h2>
+                            <RequestForm address={this.state.fundAddress}/>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
