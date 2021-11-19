@@ -47,7 +47,7 @@ tag --4-End2End-Init
 tag --5-End2End-2
 
 **6. End to End Completion Clean**
-tag --5-End2End-Clean
+tag --6-End2End-Clean
 
 TODO:
 2. detail page:
