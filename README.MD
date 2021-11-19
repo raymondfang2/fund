@@ -49,6 +49,8 @@ tag --5-End2End-2
 **6. End to End Completion Clean**
 tag --6-End2End-Clean
 
+**7. HashRouter to resolve refresh problem in GitHub
+tag 7-End2End-HashRouter
 TODO:
 2. detail page:
    . Approval button error msg 
