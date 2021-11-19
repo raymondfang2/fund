@@ -40,11 +40,14 @@ tag -- 1-Sample-UI-Router-Factory-Fund
 **3. Sample code with Donation and New Request***
 tag -- 3-Sample-Donation-Request
 
+**4. End to End Completion**
+tag --4-End2End-Init
+
 TODO:
 1. Bug in Solidity Contract - multiple donation from the same person should count once only for:
    donatorsCount++;
 2. detail page:
-    . Donate Form (Done)
-    . Request List (below the summary)
-    . Approve Button (beside the Request)
-    . Create Request Form (Done)
+   . Approval button error msg 
+   . Hide button for non -permission user
+   . Donation history
+

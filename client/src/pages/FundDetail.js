@@ -1,6 +1,6 @@
 import React from "react";
 //Semantic UI
-import {Button, Card, Form, Grid, Input, Message} from 'semantic-ui-react'
+import {Button, Card, Form, Grid, Input, Message, Table} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 //React-Route
 import { withRouter } from 'react-router-dom'
@@ -9,6 +9,7 @@ import web3 from "../web3";
 import Fund from "../fund";
 import ContributeForm from "./ContributeForm";
 import RequestForm from "./RequestForm";
+import RequestRow from "./RequestRow";
 
 class FundDetail extends React.Component {
     //1. This is part of the constructor will be invoked when page launch index.js
@@ -18,7 +19,8 @@ class FundDetail extends React.Component {
         balance: '',
         numRequests: '',
         donatorsCount: '',
-        manager: ''
+        manager: '',
+        requests: []
     };
 
 
@@ -46,9 +48,37 @@ class FundDetail extends React.Component {
             manager: summary[4]
         })
 
+        console.log("=====>");
+        console.log("=====>");
+        console.log("=====>");
+        //To get Requests
+        const requests = await Promise.all(
+            Array(parseInt(this.state.numRequests))
+                .fill()
+                .map((element, index) => {
+                    return fund.methods.requests(index).call();
+                })
+        );
+
+        this.setState({
+            requests: requests,
+        })
+
     }
 
-    renderFunds() {
+    renderRequestRows() {
+        return this.state.requests.map((request,index)=>{
+            return <RequestRow
+                key={index}
+                id={index}
+                request={request}
+                address={this.state.fundAddress}
+                donatorsCount={this.state.donatorsCount}
+            />;
+        });
+    }
+
+    renderFund() {
         const items = [{
             header: this.state.fundName,
             meta: "Fund Name",
@@ -92,22 +122,37 @@ class FundDetail extends React.Component {
             <div >
                 <Grid padded>
                     <Grid.Row>
-                        <Grid.Column width={8} >
+                        <Grid.Column width={7} >
                             <h2>Fund Detail</h2>
-                            <div>{this.renderFunds()}</div>
+                            <div>{this.renderFund()}</div>
                         </Grid.Column>
-                        <Grid.Column width={8}>
+                        <Grid.Column width={9}>
                             <h2>Donation</h2>
                             <ContributeForm address={this.state.fundAddress}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column width={8} >
+                        <Grid.Column width={7} >
                             <h2>Creat Request</h2>
                             <RequestForm address={this.state.fundAddress}/>
                         </Grid.Column>
-                        <Grid.Column width={8}>
-                            <h2>Request List with Approval Below</h2>
+                        <Grid.Column width={9}>
+                            <h2>Request List</h2>
+                            <Table>
+                                <Table.Header>
+                                    <Table.Row>
+                                        <Table.HeaderCell>ID</Table.HeaderCell>
+                                        <Table.HeaderCell>Description</Table.HeaderCell>
+                                        <Table.HeaderCell>Amount</Table.HeaderCell>
+                                        <Table.HeaderCell>Recipient</Table.HeaderCell>
+                                        <Table.HeaderCell>App Num</Table.HeaderCell>
+                                        <Table.HeaderCell>Approve</Table.HeaderCell>
+                                    </Table.Row>
+                                </Table.Header>
+                                <Table.Body>
+                                    {this.renderRequestRows()}
+                                </Table.Body>
+                            </Table>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
