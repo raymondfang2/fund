@@ -151,6 +151,8 @@ class Welcome extends React.Component {
                         <Grid.Column width={10}>
                             {/*Only show BarChart when chartData is ready*/}
                             {this.state.chartData && <Barchart chartData={this.state.chartData}/>}
+                            {!this.state.chartData && <div className="ui active inline loader"></div>
+                            }
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
