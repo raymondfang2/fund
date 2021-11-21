@@ -10,7 +10,7 @@ truffle migrate --network rinkeby
 
 2. To deploy to local Ganache
 
-npm migrate --network development
+truffle migrate --network development
 
 **Truffle with reactive and web3 sample**
 git checkout Web3 -b MyWeb3Branch
@@ -26,7 +26,8 @@ npm start
 Simply access the home page
 
 https://raymondfang2.github.io/fund/
-For this hosted one, it is deployed via my account so that raise fund can only be done by charityOwner - me!
+For this hosted one, I have let anyone can raise Fund (For Testing Only) 
+In Real Case, Only the charityOwner who deployed the Factory Contract has the permission to raise Fund
 
 ```text
 Any code change, to redeploy 
@@ -51,7 +52,12 @@ tag --6-End2End-Clean
 
 **7. HashRouter to resolve refresh problem in GitHub
 tag 7-End2End-HashRouter
-TODO:
+
+**8. Add a Barchart
+tag 8-End2End-Barchart
+    
+
+Feature to be improved:
 2. detail page:
    . Approval button error msg 
    . Hide button for non -permission user

@@ -5307,10 +5307,16 @@
       "links": {},
       "address": "0xD34fdF127573241FBF69A598F82045DF870a9640",
       "transactionHash": "0x5323f688fb55c4aa62bab8bff783b976a76d62b8f594b1368b1cadea484a540c"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x2B00F0Bc3D0aDa216C89fA2Cec0d233bDBdcCC63",
+      "transactionHash": "0xf9058b8f75180b8594ff13cd4c3c8b908f60fc16422f5503893f85dd0227ec5c"
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-11-19T10:11:16.361Z",
+  "updatedAt": "2021-11-21T05:29:11.758Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

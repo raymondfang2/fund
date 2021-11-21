@@ -56,6 +56,8 @@ class RequestForm extends Component {
                         <label>Value</label>
                         <Input
                             value={this.state.value}
+                            label="wei"
+                            labelPosition="right"
                             onChange={(event) => this.setState({ value: event.target.value })}
                         />
                     </Form.Field>
