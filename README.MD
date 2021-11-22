@@ -56,6 +56,8 @@ tag 7-End2End-HashRouter
 **8. Add a Barchart
 tag 8-End2End-Barchart
     
+**9. Add the header image
+tag 9-End2End-Header
 
 Feature to be improved:
 2. detail page:

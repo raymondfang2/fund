@@ -1,6 +1,6 @@
 import React from "react";
 //Semantic UI
-import { Card, Form, Grid, Button, Input, Message } from 'semantic-ui-react'
+import { Image, Card, Form, Grid, Button, Input, Message } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 //React-Route
 import { Link} from 'react-router-dom'
@@ -120,6 +120,8 @@ class Welcome extends React.Component {
     render() {
         return (
             <div >
+                {/*<Image src={process.env.PUBLIC_URL + '/charity.jpeg'} size='medium' centered/>*/}
+                <Link to='/'><img src={process.env.PUBLIC_URL + '/charity.jpeg'} width="100%" height="150" /></Link>
                 <Grid padded>
                     <Grid.Row>
                         <Grid.Column width={6} >

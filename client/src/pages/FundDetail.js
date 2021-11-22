@@ -3,7 +3,7 @@ import React from "react";
 import {Button, Card, Form, Grid, Input, Message, Table} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 //React-Route
-import { withRouter } from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 import web3 from "../web3";
 import Fund from "../fund";
@@ -120,6 +120,7 @@ class FundDetail extends React.Component {
     render() {
         return (
             <div >
+                <Link to='/'><img src={process.env.PUBLIC_URL + '/charity.jpeg'} width="100%" height="150" /></Link>
                 <Grid padded>
                     <Grid.Row>
                         <Grid.Column width={10} >
