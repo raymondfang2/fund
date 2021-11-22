@@ -45,7 +45,11 @@ class RequestRow extends  Component {
                 <Cell>{request.recipient}</Cell>
                 <Cell>{request.approvalCount}/{donatorsCount}</Cell>
                 <Cell>
-                    <Button color="blue" basic loading={this.state.loading} onClick={this.onApprove}>Approve</Button>
+                    {!request.complete &&
+                    <Button color="blue" basic loading={this.state.loading}
+                            onClick={this.onApprove}>Approve</Button>
+
+                    }
                 </Cell>
             </Row>
         );
