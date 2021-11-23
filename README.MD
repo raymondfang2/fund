@@ -59,6 +59,9 @@ tag 8-End2End-Barchart
 **9. Add the header image
 tag 9-End2End-Header
 
+**10. Change FundFactory for performance in welcome.js
+tag 10-End2End-Performance
+
 Feature to be improved:
 2. detail page:
    . Approval button error msg 
