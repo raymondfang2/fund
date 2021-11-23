@@ -6,15 +6,15 @@ git checkout Init-Truffle -b MyInitBranch
 
     ```create a ".secret" file in the working folder which contains your mnemonic. Your 1st account will be the charityOwner!```
    
-truffle migrate --network rinkeby
+truffle migrate --network rinkeby --reset
 
 2. To deploy to local Ganache
 
-truffle migrate --network development
+truffle migrate --network development --reset
 
 **Truffle with reactive and web3 sample**
 git checkout Web3 -b MyWeb3Branch
-1. truffle migrate --network rinkeby
+1. truffle migrate --network rinkeby --reset
 2. copy the ./build/contracts to ./client/src  --> to make sure accessible to reactjs code
 3. modify factory.js --> the FundFactory address needs to be replaced by your deployment
 

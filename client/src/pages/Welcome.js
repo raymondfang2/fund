@@ -48,11 +48,10 @@ class Welcome extends React.Component {
         const data = [];
         const backgroundColor=[];
         //use fund to fetch 'name' and 'amount'
+        const fundBalances = await factory.methods.getFundBalances().call();
         let currentBckColor=0;
         for (let i = 0; i < funds.length; i++) {
-            let currentAddress = funds[i];
-            let fund = Fund(currentAddress);
-            let currentSummary = await fund.methods.getSummary().call(); //0 - name, 1- balance
+            let currentSummary = fundBalances[i] //0 - name, 1- balance
             labels.push(currentSummary[0]);
             data.push(currentSummary[1]);
             backgroundColor.push(bckColor[currentBckColor]);
