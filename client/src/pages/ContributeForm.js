@@ -25,7 +25,7 @@ class ContributeForm extends  Component {
             console.log("=========>")
             await  fund.methods.contribute().send({
                 from: currentAccount,
-                value: this.state.value
+                value: web3.utils.toWei(this.state.value, 'ether')
             });
             window.location.reload(); //refresh the current detail page -> show the donated amount inside
         } catch (err) {
@@ -45,7 +45,7 @@ class ContributeForm extends  Component {
                     <label>Amount to Contribute</label>
                     <Input
                         value={this.state.value}
-                        label="wei"
+                        label="ether"
                         labelPosition="right"
                         onChange={event=>this.setState({value: event.target.value})} />
                 </Form.Field>

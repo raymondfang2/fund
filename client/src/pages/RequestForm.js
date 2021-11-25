@@ -25,7 +25,7 @@ class RequestForm extends Component {
         try {
             const currentAccount = await web3.givenProvider.selectedAddress;
             await fund.methods
-                .createRequest(description, value, recipient)
+                .createRequest(description, web3.utils.toWei(value, "ether"), recipient)
                 .send({ from: currentAccount });
 
             window.location.reload(); //refresh the current detail page -> show the donated amount inside
@@ -56,7 +56,7 @@ class RequestForm extends Component {
                         <label>Value</label>
                         <Input
                             value={this.state.value}
-                            label="wei"
+                            label="ether"
                             labelPosition="right"
                             onChange={(event) => this.setState({ value: event.target.value })}
                         />

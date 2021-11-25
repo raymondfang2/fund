@@ -14,7 +14,7 @@ class Barchart extends  Component {
                         plugins: {
                             title: {
                                 display: true,
-                                text: "Amount Raised in Wei"
+                                text: "Amount Raised in Ether"
                             },
                             legend: {
                                 display: true,

@@ -53,7 +53,7 @@ class Welcome extends React.Component {
         for (let i = 0; i < funds.length; i++) {
             let currentSummary = fundBalances[i] //0 - name, 1- balance
             labels.push(currentSummary[0]);
-            data.push(currentSummary[1]);
+            data.push(web3.utils.fromWei(currentSummary[1], "ether")); //web3.utils.fromWei(this.state.balance, "ether")
             backgroundColor.push(bckColor[currentBckColor]);
             currentBckColor++;
             if (currentBckColor==bckColor.length) {
