@@ -35,10 +35,10 @@ cd client
 npm run deploy
 ```
 
-**1. Sample Code with Almost Everything***
+**1. Sample Code with Almost Everything**
 tag -- 1-Sample-UI-Router-Factory-Fund
 
-**3. Sample code with Donation and New Request***
+**3. Sample code with Donation and New Request**
 tag -- 3-Sample-Donation-Request
 
 **4. End to End Completion**
@@ -50,22 +50,22 @@ tag --5-End2End-2
 **6. End to End Completion Clean**
 tag --6-End2End-Clean
 
-**7. HashRouter to resolve refresh problem in GitHub
+**7. HashRouter to resolve refresh problem in GitHub**
 tag 7-End2End-HashRouter
 
-**8. Add a Barchart
+**8. Add a Barchart**
 tag 8-End2End-Barchart
     
-**9. Add the header image
+**9. Add the header image**
 tag 9-End2End-Header
 
-**10. Change FundFactory for performance in welcome.js
+**10. Change FundFactory for performance in welcome.js**
 tag 10-End2End-Performance
 
-**11. End2End unit ether
+**11. End2End unit ether**
 tag 11-End2End-Ether
 
-**12 End2End Tested
+**12 End2End Tested**
 tag 12-End2End-Tested
 
 Feature to be improved:
@@ -73,4 +73,5 @@ Feature to be improved:
    . Approval button error msg 
    . Hide button for non -permission user
    . Donation history
+   . Oracle to see the USD to Ether value
 
