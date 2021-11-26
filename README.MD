@@ -62,6 +62,9 @@ tag 9-End2End-Header
 **10. Change FundFactory for performance in welcome.js
 tag 10-End2End-Performance
 
+**11. End2End unit ether
+tag 11-End2End-Ether
+
 Feature to be improved:
 2. detail page:
    . Approval button error msg 
