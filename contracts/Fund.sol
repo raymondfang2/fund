@@ -69,7 +69,8 @@ contract Fund {
     function finalizeRequest(uint index) internal {
         Request storage request = requests[index];
 
-        if (request.approvalCount >= (donatorsCount / 2) && !request.complete) {
+        //Decimal not supported, that is why times 10
+        if (request.approvalCount*10 >= (donatorsCount*10 / 2) && !request.complete) {
             request.recipient.transfer(request.value);
             request.complete = true;
         }
